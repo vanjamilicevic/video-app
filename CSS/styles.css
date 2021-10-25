@@ -1,0 +1,282 @@
+
+/* 
+    Setting default size of player for desktop version
+*/
+.player {
+
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+    position: relative;
+}
+.video {
+
+    width: 100%;
+}
+
+/* 
+    Setting styles for "player-controls" section
+        - Styling images, images-hover and progress bar
+        - Styling reproduction speed section (hidden by default)
+*/
+.player-contorls {
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 0;
+    bottom: 0%;
+    padding-bottom: 5px;
+    width: 100%;
+    background-color: rgba(233, 222, 222, 0.5);
+
+}
+
+.play-button {
+
+    height: 25px;
+}
+
+.play-button:hover{
+
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.pause-button {
+
+    height: 25px;
+}
+
+.pause-button:hover {
+
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.sound-max {
+
+    width: 7%;
+    height: 8px;
+    margin-right: 2%;
+    border-radius: 5px;
+}
+
+.sound-image {
+
+    height: 18px;
+    margin-right: 0.5%;
+}
+
+.sound-image:hover {
+
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.progress {
+
+    width: 70%;
+    height: 8px;
+    margin-right: 1%;
+    border-radius: 5px;
+}
+
+.slider {
+
+    grid-area: slider;
+  
+    border-radius: 8px;
+    height: 8px;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+  }
+
+.slider::-webkit-slider-thumb {
+ 
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+  
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+  
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  
+  
+  /* Styling slider thumb for Mozila separately */
+  input[type=range]::-moz-range-thumb {
+    
+    height: 50px;
+    width: 50px;
+    border: 0;
+    border-radius: 100%;
+  
+    background-color: #454747;
+    background-repeat: no-repeat;
+    background-position: center center;
+  
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  
+  /* Setting box shadow on hover for Mozila */
+  .slider::-moz-range-thumb:hover {
+  
+    -webkit-box-shadow: 0px 20px 33px 11px rgba(16,216,196,0.35); 
+    box-shadow: 0px 20px 33px 11px rgba(16,216,196,0.35);
+  }
+
+  .sound-max {
+  
+    border-radius: 8px;
+    height: 8px;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+  }
+  
+  /* Styling slider thumb */
+  .sound-max::-webkit-slider-thumb {
+   
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+  
+    background-color: #2c2e2e;
+    background-repeat: no-repeat;
+    background-position: center center;
+  
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+
+.time {
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.dots-image {
+
+    height: 20px;
+    margin-left: 1%;
+}
+
+.dots-image:hover {
+
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.full-screen {
+
+    height: 20px;
+    margin-right: 2%;
+    margin-left: 1%;
+}
+
+.full-screen:hover {
+
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.exit-fullscreen {
+
+    height: 20px;
+    margin-right: 1%;
+}
+
+.exit-fullscreen:hover {
+
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.not-visible {
+
+    display: none;
+}
+
+.video-speed {
+
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 15%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+}
+
+.reproduction-speed {
+
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    line-height: 30px;
+    padding: 5% 5% 5% 5%;
+    font-family: monospace;
+}
+
+.reproduction-speed:hover {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.next-previous-video {
+
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+}
+
+.fa-arrow-left, .fa-arrow-right {
+
+    font-size: 30px;
+    color: rgb(34, 36, 36);
+}
+
+.fa-arrow-left, .fa-arrow-right:hover{
+
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 820px) {
+
+    .player {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .progress {
+
+        width: 45%;
+        height: 6px;
+    }
+
+    .sound-max {
+
+        width: 11%;
+        height: 6px;
+    }
+
+    .sound-max::-webkit-slider-thumb {
+   
+        height: 12px;
+        width: 12px;
+    }
+}
