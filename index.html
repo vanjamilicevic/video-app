@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./CSS/globals.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Video Challenge</title>
+</head>
+<body>
+    <!-- 
+        Main class consists of two sections:
+            - player section
+            - player controls section
+     -->
+    <main class="player" id="player">
+
+        <video class="video" id="video" autoplay="true">
+        </video>
+
+    <!-- 
+        Player controls section consist of
+            - Player contorls images
+            - Progress field
+            - Section of video speed menu 
+              which is hidden until three dots are clicked
+     -->
+        <section class="player-contorls not-visible full-screen-active-player-controls" id="player-controls">
+            <img class="play-button" id="play-video" onclick="playVideo()" src="./images/play-button.png" alt="Play button">
+            <img class="pause-button not-visible" id="pause-video" onclick="pauseVideo()" src="./images/pause.png" alt="Pause button">
+            <img class="sound-image" id="sound-image" src="./images/volume.png" alt="Sound image">
+            <input type="range" min="0" max="10" step="1" class="sound-max" id="sound-slider">
+                
+            <input type="range" value="0" step="0.001" class="progress slider" id="slider">
+            <section class="video-current-time time" id="video-current-time"></section>
+            <p class="time">/</p>
+            <section class="video-duration time" id="video-duration"></section>
+            <img class="dots-image" id="dots-image" src="./images/dots.png" alt="Dots image">
+            <img onclick="openFullscreen()" class="full-screen" id="full-screen" src="./images/full-screen.png" alt="Full screen image">
+            <img class="exit-fullscreen not-visible" id="exit-fullscreen" onclick="closeFullscreen()" src="./images/exit-fullscreen.png" alt="Full screen image">
+            
+        </section>
+        <section class="video-speed not-visible" id="video-speed">
+            <div class="reproduction-speed"><span class="speed-value">0.5</span>x</div>
+            <div class="reproduction-speed"><span class="speed-value">0.75</span>x</div>
+            <div class="reproduction-speed"><span class="speed-value">1</span>x</div>
+            <div class="reproduction-speed"><span class="speed-value">1.5</span>x</div>
+            <div class="reproduction-speed"><span class="speed-value">2</span>x</div>
+        </section>
+    </main>
+    <section class="next-previous-video">
+        
+        <section id="previous-video">
+            <i class="fas fa-arrow-left"></i>
+        </section>
+        <section id="next-video">
+            <i class="fas fa-arrow-right"></i>
+        </section>
+    </section>
+
+    
+    <script src="./utils/index.js"></script>
+</body>
+</html>
